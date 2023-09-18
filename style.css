@@ -1,0 +1,228 @@
+body,
+html {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Montserrat, Verdana, sans-serif;
+    height: 400vh;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 30px;
+}
+
+#bannerone {
+    background-color: rgb(226, 43, 144);
+    color: rgb(255, 249, 241);
+    height: 85px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.line-1 {
+    position: fixed;
+    left: -500px;
+    top: 10px;
+    white-space: nowrap;
+    color: rgb(226, 43, 144);
+
+}
+
+.line-2 {
+    position: fixed;
+    right: -500px;
+    white-space: nowrap;
+    color: rgb(226, 43, 144);
+    top: 50px;
+    font-size: 20px;
+}
+
+.line-3 {
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+    position: relative;
+    animation: text 3s 1;
+    background: rgb(226, 43, 144);
+}
+
+.line-4 {
+    font-size: 20px;
+}
+
+@keyframes text {
+    0% {
+        color: brown;
+        margin-bottom: -50px;
+    }
+
+    30% {
+        letter-spacing: 25px;
+        margin-bottom: -50px;
+    }
+
+    85% {
+        letter-spacing: 3px;
+        margin-bottom: -50px;
+    }
+}
+
+.bannerthree {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 249, 241);
+    background-color: rgb(226, 43, 144);
+    margin-top: 60px;
+}
+
+.bannerfour {
+    background-color: rgb(226, 43, 144);
+    color: rgb(255, 249, 241);
+    height: 85px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 60px;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.line-5 {
+    animation: move 9s linear infinite;
+    display: inline-block;
+
+}
+
+@keyframes move {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+.bannerfive {
+    background-color: rgb(226, 43, 144);
+    color: rgb(255, 249, 241);
+    height: 85px;
+    font-size: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 60px;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+span {
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+span.fade {
+    opacity: 1;
+}
+
+.bannersix {
+    background-color: rgb(226, 43, 144);
+    height: 85px;
+    display: flex;
+    margin-top: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.wavy {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(255, 249, 241);
+}
+
+.bs {
+
+    display: inline-block;
+    -webkit-box-reflect: below -12px linear-gradient(transparent, rgb(255, 249, 241, 0.3));
+    animation: animate 1s ease-in-out infinite;
+    animation-delay: calc(0.01s * var(--i));
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0px);
+    }
+
+    20% {
+        transform: translateY(-20px);
+    }
+
+    40%,
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+#space {
+    margin-right: 10px;
+}
+
+.bannerseven {
+    background-color: rgb(226, 43, 144);
+    height: 85px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    margin-top: 60px;
+    font-size: 30px;
+}
+
+h4 {
+    position: relative;
+    color: rgb(228, 103, 172);
+}
+
+
+h4::before {
+    content: attr(data-text);
+    position: absolute;
+    color: rgb(255, 249, 241);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid rgb(255, 249, 241);
+    animation: animate2 8s linear infinite;
+    filter: drop-shadow(0 0 20px rgb(255, 249, 241)) drop-shadow(0 0 30px rgb(255, 249, 241));
+}
+
+@keyframes animate2 {
+
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    70%,
+    90% {
+        width: 100%
+    }
+}
+
